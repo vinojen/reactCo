@@ -11,16 +11,22 @@ class Counter extends Component {
          this.setState({value:this.state.value+1});
         // console.log("clicked")
      }
-     handleIncrement=()=>{
+     handleDecrement=()=>{
         this.setState({value:this.state.value-1});
        // console.log("clicked")
     }
 
+    handleReset=()=>{
+        this.setState({value:0});
+       // console.log("clicked")
+    }
+
     render() { 
+        const{value}=this.state
         return ( 
 <div>
-           <Output value={this.state.value}> </Output>
-           <Button Increment={this.handleIncrement}></Button>
+           <Output value={value}> </Output>
+           <Button Increment={this.handleIncrement} Decrement={this.handleDecrement} Reset={this.handleReset}></Button>
            </div>
          );
     }

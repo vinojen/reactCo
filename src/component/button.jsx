@@ -2,16 +2,16 @@ import React from 'react'
 
 
 
-const Button=({Increment})=>{
+const Button=({Increment,Decrement,Reset})=>{
 
 
  
         return (
             <div>
-                <h1>select on</h1>
-                <input type="button" value="Increment" onClick={Increment}/>
-                <input type="button" value="Decrement" onClick={Decrement}/>
-                <input type="button" value="Reset"/>
+              
+                <input type="button" value="Increment" onClick={Increment} className="btn btn-primary m-4"/>
+                <input type="button" value="Decrement" onClick={Decrement} className="btn btn-secondary m-4"/>
+                <input type="button" value="Reset" onClick={Reset} className="btn btn-danger m-4"/>
 
             </div>
         );

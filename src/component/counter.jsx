@@ -14,26 +14,26 @@ const mapDispatchProps={
   Decrement
 };
 class Counter extends Component {
-    state = { 
-     value:4
-     }
+    // state = { 
+    //  value:4
+    //  }
 
-     handleIncrement=()=>{
-         this.setState({value:this.state.value+1});
-        // console.log("clicked")
-     }
-     handleDecrement=()=>{
-        this.setState({value:this.state.value-1});
-       // console.log("clicked")
-    }
+    //  handleIncrement=()=>{
+    //      this.setState({value:this.state.value+1});
+    //     // console.log("clicked")
+    //  }
+    //  handleDecrement=()=>{
+    //     this.setState({value:this.state.value-1});
+    //    // console.log("clicked")
+    // }
 
-    handleReset=()=>{
-        this.setState({value:0});
-       // console.log("clicked")
-    }
+    // handleReset=()=>{
+    //     this.setState({value:0});
+    //    // console.log("clicked")
+    // }
 
     render() { 
-        const{value}=this.state
+        //const{value}=this.state
         return ( 
 <div>
            <Output value={this.props.Count}> </Output>

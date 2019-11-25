@@ -1,7 +1,18 @@
 import React, { Component } from 'react';
 import Output from './output';
 import  Button from './button';
+import {connect} from 'react-redux'
+import {Increment, Decrement} from './counterActiom'
 
+const mapStateToProps=(state)=>({
+
+  Count :state.count 
+});
+
+const mapDispatchProps={
+  Increment,
+  Decrement
+};
 class Counter extends Component {
     state = { 
      value:4
@@ -25,11 +36,13 @@ class Counter extends Component {
         const{value}=this.state
         return ( 
 <div>
-           <Output value={value}> </Output>
-           <Button Increment={this.handleIncrement} Decrement={this.handleDecrement} Reset={this.handleReset}></Button>
+           <Output value={this.props.Count}> </Output>
+           <Button Increment={this.props.Increment} 
+           Decrement={this.props.Decrement} 
+           Reset={this.handleReset}></Button>
            </div>
          );
     }
 }
  
-export default Counter;
+export default connect(mapStateToProps,mapDispatchProps) (Counter);
